@@ -1,0 +1,49 @@
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+
+.grow-0 { flex-grow: 0; }
+.grow-1 { flex-grow: 1; }
+
+.justify-center { justify-content: center; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+
+.self-center { align-self: center; }
+.self-start { align-self: start; }
+.self-end { align-self: end; }
+  
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@for $i from 1 to 10 {
+  .gap-x-#{$i} > *:not(:first-child) {
+    margin-left: $i * 4px;
+  }
+}
+
+@for $i from 1 to 10 {
+  .gap-y-#{$i} > *:not(:first-child) {
+    margin-top: $i * 4px;
+  }
+}
+
+@mixin item-gap-x($gap) {
+  &:not(:first-child) {
+    margin-left: $gap;
+  }
+}
+
+@mixin item-gap-y($gap) {
+  &:not(:first-child) {
+    margin-top: $gap;
+  }
+}

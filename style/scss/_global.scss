@@ -1,0 +1,29 @@
+@import 'reset';
+
+@font-face {
+  font-family: BrunoAscSC;
+  src: url('/fonts/BrunoAceSC/BrunoAceSC-Regular.ttf') format("truetype"); 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading {
+  line-height: 1.2;
+}
+
+img {
+  // 卡斯柏老師提示
+  max-width: 100%;
+  height: auto;
+  // 助教提示
+  vertical-align: middle;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}

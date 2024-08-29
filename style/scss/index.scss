@@ -1,0 +1,20 @@
+@import 'mixins';
+@import 'global';
+@import 'util';
+@import 'flex';
+
+body {
+  // fonts
+  font-family: BrunoAscSC;
+}
+
+.container {
+  // 留白比例: 312px ÷ 1920px = 16.25%
+  padding-left: 16.25%;
+  padding-right: 16.25%;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+}

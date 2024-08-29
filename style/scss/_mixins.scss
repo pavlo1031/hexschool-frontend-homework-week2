@@ -1,0 +1,16 @@
+@mixin add-css-variables($variableGroup) {
+    :root {
+        @each $name, $value in $variableGroup {
+            --#{$name}: #{$value};
+        } 
+    }
+}
+
+@mixin add-css-colors($colorsLightMode, $colorsDarkMode) {
+    // light mode
+    @include add-css-variables($colorsLightMode);    
+    // dark mode
+    @media (prefers-color-scheme: dark) {
+        @include add-css-variables($colorsDarkMode);
+    }
+}
